@@ -55,7 +55,7 @@ HtmlCode = HtmlCode = '''<!DOCTYPE html>
 HtmlCode = str(HtmlCode).replace("recognition.lang = ' ';", f"recognition.lang = '{InputLanguage}';")
 
 # Write the modified HTML code to a file.
-with open(r"Data\Voice.html", "w") as f:
+with open(r"..\Data\Voice.html", "w") as f:
     f.write(HtmlCode)
 
 # Get the current working directory.
