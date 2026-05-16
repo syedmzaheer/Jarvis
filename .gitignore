@@ -1,0 +1,38 @@
+ # --- Environment Variables (Sensitive) ---
+  .env
+  .env.*
+  !.env.example
+
+  # --- Python Bytecode & Cache ---
+  __pycache__/
+  *.py[cod]
+  *$py.class
+
+  # --- Virtual Environments ---
+  venv/
+  .venv/
+  env/
+  .env/
+  bin/
+  lib/
+
+  # --- IDEs & Editors ---
+  .vscode/
+  .idea/
+  *.swp
+  *.swo
+
+  # --- OS Generated Files ---
+  .DS_Store
+  Thumbs.db
+
+  # --- Build & Distribution ---
+  dist/
+  build/
+  *.egg-info/
+
+  # --- Testing & Coverage ---
+  .pytest_cache/
+  .coverage
+  htmlcov/
+  .tox/
