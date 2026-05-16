@@ -55,14 +55,14 @@ HtmlCode = HtmlCode = '''<!DOCTYPE html>
 HtmlCode = str(HtmlCode).replace("recognition.lang = ' ';", f"recognition.lang = '{InputLanguage}';")
 
 # Write the modified HTML code to a file.
-with open(r"..\Data\Voice.html", "w") as f:
+with open(r"data/Voice.html", "w") as f:
     f.write(HtmlCode)
 
 # Get the current working directory.
 current_dir = os.getcwd()
 
 # Generate the file path for the HTML file.
-Link = f"{current_dir}/Data/Voice.html"
+Link = f"{current_dir}/data/Voice.html"
 
 #Set CHrome options for the WebDriver.
 chrome_options = Options()
@@ -78,7 +78,7 @@ service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=chrome_options)
 
 # Define the path for temporary files.
-TempDirPath = rf'{current_dir}/Frontens/Files'
+TempDirPath = rf'{current_dir}/frontend/Files'
 
 # Function to set the assistant status by writing to a file.
 def SetAssistantStatus(status):
