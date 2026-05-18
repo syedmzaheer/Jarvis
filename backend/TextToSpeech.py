@@ -8,7 +8,7 @@ from dotenv import dotenv_values
 env_vars = dotenv_values(".env")
 AssistantVoice = env_vars.get("AssistantVoice")
 
-async def TextToAudioFile(text)  None:
+async def TextToAudioFile(text) -> None:
     file_path = r"Data\Speech.mp3"
 
     if os.path.exists(file_path):

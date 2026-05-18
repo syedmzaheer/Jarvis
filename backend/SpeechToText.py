@@ -86,7 +86,7 @@ def SetAssistantStatus(status):
         file.write(status)
 
 # Function to modify a query to ensure a proper punctuation and formating.
-def QuerryModfier(Query):
+def QueryModfier(Query):
     new_query = Query.lower().strip()
     query_words = new_query.split()
     question_words = {"how", "what", "who", "where", "when", "why", "which", "whose", "whom", "can you", "what's", "where's", "how's", "can you"}
@@ -124,12 +124,12 @@ def SpeechRecognition():
                 driver.find_element(by=By.ID, value="end").click()
                 
                 #  If the input language is English, retun the modified query.
-                if InputLanguage.lower() == "en" or"en" in InputLanguage.lower():
-                    return QuerryModfier(Text)
+                if InputLanguage.lower() == "en" or "en" in InputLanguage.lower():
+                    return QueryModfier(Text)
                 else:
                     # If the input language is not English, translate the text into English and return the modified query.
                     SetAssistantStatus("Translating ...")                    
-                    return QuerryModfier(UniversalTranslator(Text))
+                    return QueryModfier(UniversalTranslator(Text))
         
         except Exception as e:
             pass
